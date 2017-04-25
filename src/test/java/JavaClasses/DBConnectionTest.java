@@ -63,6 +63,7 @@ public class DBConnectionTest {
         catch(SQLException ex)
         {
             System.out.println("SQL Error: "+ex);
+            fail("SQL error came");
         }
     }
     
