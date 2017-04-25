@@ -21,7 +21,7 @@ h1 {
     font-size: 1.4em;
     color: #ffffff;
     font-weight: normal;
-    width: 700px;
+    width: 1000px;
 }
 
 h4 {
@@ -29,7 +29,7 @@ h4 {
     font-size: 1em;
     color: #ffffff;
     font-weight: normal;
-    width: 700px;
+    width: 1000px;
 }
 
 table {
@@ -59,7 +59,7 @@ a:link:hover {
    text-decoration: underline;
 }
 
-.button {
+.submit {
     background-color: #000000;
     border: none;
     color: white;
