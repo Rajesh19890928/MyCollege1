@@ -81,7 +81,7 @@ input[type=submit] {
 }
 .plain-select select {
     line-height:normal;
-    height:28px;
+    height:34px;
     -webkit-appearance:none;
     -moz-appearance:none;
     -ms-appearance:none;
