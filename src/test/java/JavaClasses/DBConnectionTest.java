@@ -58,4 +58,5 @@ public class DBConnectionTest {
         ResultSet result = instance.getDetails(subject_id);
         assertNull(result);
     }
+    
 }
