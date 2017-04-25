@@ -10,7 +10,7 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-
+import java.sql.SQLException;
 /**
  *
  * @author raojha
@@ -56,7 +56,13 @@ public class DBConnectionTest {
         int subject_id = 0;
         DBConnection instance = new DBConnection();
         ResultSet result = instance.getDetails(subject_id);
-        System.out.println("Value of resultset: "+result);
+        try{
+            result.next();
+        }
+        catch(SQLException ex)
+        {
+            System.out.println("SQL Error: "+ex);
+        }
         assertNull(result);
     }
     
