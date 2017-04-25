@@ -54,16 +54,18 @@ public class DBConnectionTest {
     public void testGetDetails1() {
         System.out.println("getDetails");
         int subject_id = 0;
+        String a="test";
         DBConnection instance = new DBConnection();
         ResultSet result = instance.getDetails(subject_id);
         try{
             result.next();
+            a = result.getString(1);
         }
         catch(SQLException ex)
         {
             System.out.println("SQL Error: "+ex);
         }
-        assertNull(result);
+        assertNull(a);
     }
     
 }
