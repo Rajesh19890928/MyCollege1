@@ -11,7 +11,7 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <title>Home Page</title>
     </head>
-    <body>
+    <body background="F50CNW_lo.png">
         <h1>Welcome to your college</h1>
         <br>
         <%
