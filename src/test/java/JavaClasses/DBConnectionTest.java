@@ -36,7 +36,14 @@ public class DBConnectionTest {
         System.out.println("getSubjects");
         DBConnection instance = new DBConnection();
         ResultSet result = instance.getSubjects();
-        assertNotNull(result);
+        try{
+            assertTrue(result.isBeforeFirst());
+        }
+        catch(SQLException ex)
+        {
+            System.out.println("SQL Error: "+ex);
+            fail("SQL error came");
+        }
     }
 
     /**
@@ -48,7 +55,14 @@ public class DBConnectionTest {
         int subject_id = 1;
         DBConnection instance = new DBConnection();
         ResultSet result = instance.getDetails(subject_id);
-        assertNotNull(result);
+        try{
+            assertTrue(result.isBeforeFirst());
+        }
+        catch(SQLException ex)
+        {
+            System.out.println("SQL Error: "+ex);
+            fail("SQL error came");
+        }
     }
     @org.junit.Test
     public void testGetDetails1() {
