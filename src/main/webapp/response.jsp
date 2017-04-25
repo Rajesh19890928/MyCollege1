@@ -12,11 +12,11 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="style.css">
-        <title>Welcome</title>
+        <title>Phoenix Consulting - Details</title>
     </head>
     <body>
-        <h1>Welcome to your college</h1>
-        <h4>These are the teachers who teach this course</h4>
+        <h1>Welcome to Phoenix Consulting</h1>
+        <h4>These are the counselors who can help you</h4>
         <%
             int subject_id = Integer.parseInt(request.getParameter("subject_id"));
             JavaClasses.DBConnection obj = new JavaClasses.DBConnection();
@@ -33,12 +33,12 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><strong>Course Description: </strong></td>
+                    <td><strong>Service Description: </strong></td>
                     <td><span style="font-size:smaller; font-style:italic;"><% out.print(rs.getString("description")); %>%></span></td>
                 </tr>
                 
                 <tr>
-                    <td><strong>Teacher: </strong></td>
+                    <td><strong>Counselor: </strong></td>
                     <td><% out.print(rs.getString("first_name"));%> <%out.print(rs.getString("last_name")); %>
                         <br>
                         <span style="font-size:smaller; font-style:italic;">

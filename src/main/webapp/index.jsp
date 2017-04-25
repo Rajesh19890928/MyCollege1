@@ -9,10 +9,10 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="style.css">
-        <title>Home Page</title>
+        <title>Home Page - Phoenix</title>
     </head>
     <body>
-        <h1>Welcome to your college</h1>
+        <h1>Welcome to Phoenix Consulting</h1>
         <br>
         <%
             JavaClasses.DBConnection obj = new JavaClasses.DBConnection();
@@ -23,7 +23,7 @@
             <table border="0">
                 <thead>
                     <tr>
-                        <th>Please select a subject</th>
+                        <th>Please select an are you need help in: </th>
                     </tr>
                 </thead>
                 <tbody>
