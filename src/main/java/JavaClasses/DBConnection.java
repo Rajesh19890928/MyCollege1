@@ -25,6 +25,7 @@ public class DBConnection {
         //The JDBC Data source that we just created
         //DataSource ds = (DataSource) context.lookup("connpool");
         //Connection connection = ds.getConnection();
+        ResultSet rs = null;
         
         try
         {
@@ -32,8 +33,7 @@ public class DBConnection {
             Connection con = DriverManager.getConnection("jdbc:mysql://20.0.1.245:3306/mynewdatabase","root","tiger");
             String query = "SELECT DISTINCT subject_id, name FROM subject";
             PreparedStatement statement = con.prepareStatement(query);
-            ResultSet rs = statement.executeQuery();
-            return rs;
+            rs = statement.executeQuery();
         }
         catch(SQLException ex) 
         {
@@ -42,5 +42,6 @@ public class DBConnection {
             System.out.println("SQLState: " + ex.getSQLState());
             System.out.println("VendorError: " + ex.getErrorCode());
         }
+        return rs;
     }
 }
