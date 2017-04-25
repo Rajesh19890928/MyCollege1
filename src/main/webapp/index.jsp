@@ -41,7 +41,9 @@
                                     <%
                                     }%>
                                 </select>
-                                <br><input type="submit" value="Submit" name="submit" />
+                                <br>
+                                <br>
+                                <input type="submit" value="Submit" name="submit" />
                             </form>
                         </td>
                     </tr>

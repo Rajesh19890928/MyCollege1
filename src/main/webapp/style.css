@@ -12,7 +12,7 @@ body {
     font-size: smaller;
     padding: 50px;
     background-image: url("bg.jpg");
-    background-repeat: no-repeat;        
+    background-repeat: repeat-y;        
 }
 
 h1 {
@@ -21,11 +21,19 @@ h1 {
     font-size: 1.4em;
     color: #ffffff;
     font-weight: normal;
-    width: 450px;
+    width: 700px;
+}
+
+h4 {
+    text-align: left;
+    font-size: 1em;
+    color: #ffffff;
+    font-weight: normal;
+    width: 700px;
 }
 
 table {
-    width: 580px;
+    width: 650px;
     padding: 10px;
     background-color: rgba(211,211,211,0.5);
 }
@@ -46,7 +54,20 @@ a:link {
 }
 
 a:link:hover {
-   color: #4B0082;
+   color: #ffffff;
    font-weight: normal;
    text-decoration: underline;
+}
+
+.button {
+    background-color: #000000;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
