@@ -1,7 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context antiJARLocking="true" path="/MyCollege1">
-<Resource name="connpool" auth="Container" type="javax.sql.DataSource"
-            maxActive="100" maxIdle="30" maxWait="10000"
-            username="root" password="tiger" driverClassName="com.mysql.jdbc.Driver"
-            url="jdbc:mysql://20.0.1.245:3306/mynewdatabase"/>
-</Context>
+<Context antiJARLocking="true" path="/MyCollege1" />
