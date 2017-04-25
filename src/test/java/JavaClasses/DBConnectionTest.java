@@ -57,7 +57,7 @@ public class DBConnectionTest {
         DBConnection instance = new DBConnection();
         ResultSet result = instance.getDetails(subject_id);
         System.out.println(result);
-        assertNotNull(result);
+        assertNull(result);
     }
     
 }
