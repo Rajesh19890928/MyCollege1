@@ -12,6 +12,8 @@ body {
     font-size: smaller;
     padding: 50px;
     color: #000080;
+    background-image: url("F50CNW_lo.png");
+    background-repeat: no-repeat;        
 }
 
 h1 {
