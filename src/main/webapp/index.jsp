@@ -23,13 +23,15 @@
             <table border="0">
                 <thead>
                     <tr>
-                        <th>Please select an are you need help in: </th>
+                        <th>Please select an area you need help in </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td height="0">
+                            <br>
                             <form action="response.jsp" method="post">
+                                <span class="plain-select">
                                 <select name="subject_id">
                                     <%
                                     while (rs.next())
@@ -41,10 +43,11 @@
                                     <%
                                     }%>
                                 </select>
+                                </span>
                                 <br>
                                 <br>
-                                <input type="submit" value="Submit" name="submit" />
-                            </form>
+                                <input type="submit" value="Submit" name="submit" />                                
+                            </form>                            
                         </td>
                     </tr>
                 </tbody>
