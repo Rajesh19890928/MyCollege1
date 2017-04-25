@@ -35,6 +35,10 @@ public class DBConnection {
             PreparedStatement statement = con.prepareStatement(query);
             rs = statement.executeQuery();
         }
+        catch(ClassNotFoundException cnfex)
+        {
+            System.out.println("Error");
+        }
         catch(SQLException ex) 
         {
             // handle any errors
