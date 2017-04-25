@@ -2,13 +2,8 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
 
-<%@page import="javax.naming.Context"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.PreparedStatement"%>
-<%@page import="java.sql.SQLException"%>
-<%@page import="java.sql.Connection"%>
-<%@page import="javax.sql.DataSource"%>
-<%@page import="javax.naming.InitialContext"%>
 
 <html>
     <head>
@@ -20,21 +15,9 @@
         <h1>Welcome to your college</h1>
         <br>
         <%
-            InitialContext initialContext = new InitialContext();
-            Context context = (Context) initialContext.lookup("java:comp/env");
-            //The JDBC Data source that we just created
-            DataSource ds = (DataSource) context.lookup("connpool");
-            Connection connection = ds.getConnection();
-
-            if (connection == null)
-            {
-                throw new SQLException("Error establishing connection!");
-            }
-            String query = "SELECT DISTINCT subject_id, name FROM subject";
-
-            PreparedStatement statement = connection.prepareStatement(query);
-            ResultSet rs = statement.executeQuery();
-%>
+            JavaClasses.DBConnection obj = new JavaClasses.DBConnection();
+            ResultSet rs = obj.getResultSet();
+        %>
 
         
             <table border="0">
