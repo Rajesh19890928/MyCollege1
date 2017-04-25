@@ -59,7 +59,7 @@ a:link:hover {
    text-decoration: underline;
 }
 
-.submit {
+input[type=submit] {
     background-color: #000000;
     border: none;
     color: white;
