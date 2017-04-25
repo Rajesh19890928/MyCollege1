@@ -16,7 +16,7 @@
         <br>
         <%
             JavaClasses.DBConnection obj = new JavaClasses.DBConnection();
-            ResultSet rs = obj.getResultSet();
+            ResultSet rs = obj.getSubjects();
         %>
 
         

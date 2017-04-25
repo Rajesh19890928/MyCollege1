@@ -3,13 +3,8 @@
     Created on : Apr 25, 2017, 1:50:27 PM
     Author     : raojha
 --%>
-<%@page import="javax.naming.Context"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.PreparedStatement"%>
-<%@page import="java.sql.SQLException"%>
-<%@page import="java.sql.Connection"%>
-<%@page import="javax.sql.DataSource"%>
-<%@page import="javax.naming.InitialContext"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
@@ -23,20 +18,9 @@
         <h1>Welcome to your college</h1>
         <h4>These are the teachers who teach this course</h4>
         <%
-            InitialContext initialContext = new InitialContext();
-            Context context = (Context) initialContext.lookup("java:comp/env");
-            //The JDBC Data source that we just created
-            DataSource ds = (DataSource) context.lookup("connpool");
-            Connection connection = ds.getConnection();
-
-            if (connection == null)
-            {
-                throw new SQLException("Error establishing connection!");
-            }
-            String query = "SELECT * FROM counselor as c inner join subject as s on c.counselor_id=s.counselor_idfk where s.subject_id="+request.getParameter("subject_id");
-
-            PreparedStatement statement = connection.prepareStatement(query);
-            ResultSet rs = statement.executeQuery();
+            int subject_id = Integer.parseInt(request.getParameter("subject_id"));
+            JavaClasses.DBConnection obj = new JavaClasses.DBConnection();
+            ResultSet rs = obj.getDetails(subject_id);
             while (rs.next())
             {
             %>

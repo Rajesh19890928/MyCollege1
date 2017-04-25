@@ -18,7 +18,7 @@ import java.sql.DriverManager;
 import java.sql.*;
 
 public class DBConnection {
-    public ResultSet getResultSet()
+    public ResultSet getSubjects()
     {
         //InitialContext initialContext = new InitialContext();
         //Context context = (Context) initialContext.lookup("java:comp/env");
@@ -37,7 +37,33 @@ public class DBConnection {
         }
         catch(ClassNotFoundException cnfex)
         {
-            System.out.println("Error");
+            System.out.println("Error: " + cnfex);
+        }
+        catch(SQLException ex) 
+        {
+            // handle any errors
+            System.out.println("SQLException: " + ex.getMessage());
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError: " + ex.getErrorCode());
+        }
+        return rs;
+    }
+    
+    public ResultSet getDetails(int subject_id)
+    {
+        ResultSet rs = null;
+        
+        try
+        {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://20.0.1.245:3306/mynewdatabase","root","tiger");
+            String query = "SELECT * FROM counselor AS c INNER JOIN subject AS s ON c.counselor_id=s.counselor_idfk WHERE s.subject_id="+subject_id;
+            PreparedStatement statement = con.prepareStatement(query);
+            rs = statement.executeQuery();
+        }
+        catch(ClassNotFoundException cnfex)
+        {
+            System.out.println("Error: " + cnfex);
         }
         catch(SQLException ex) 
         {
