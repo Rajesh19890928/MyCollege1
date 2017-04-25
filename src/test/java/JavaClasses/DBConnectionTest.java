@@ -58,14 +58,12 @@ public class DBConnectionTest {
         DBConnection instance = new DBConnection();
         ResultSet result = instance.getDetails(subject_id);
         try{
-            result.next();
-            a = result.getString(1);
+            assertFalse(result.isBeforeFirst());
         }
         catch(SQLException ex)
         {
             System.out.println("SQL Error: "+ex);
         }
-        assertNull(a);
     }
     
 }
