@@ -60,13 +60,14 @@ a:link:hover {
 }
 
 input[type=submit] {
-    background-color: #000000;
+    background-color: #838383;
     border: none;
     color: white;
-    padding: 10px 32px;
+    padding: 8px 28px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     cursor: pointer;
+    border-radius: 2px;
 }
